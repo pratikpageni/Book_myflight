@@ -6,4 +6,4 @@ import os
 def index(request):
    
 
-    return HttpResponse ("Flights")
+    return HttpResponse ("flights")
