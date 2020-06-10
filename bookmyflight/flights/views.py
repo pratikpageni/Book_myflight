@@ -12,7 +12,7 @@ def index(request):
 
     return render (request,"flights/index.html",context)
 
-def flight(self):
+def flight(request,flight_id):
     try:
         flight=Flight.objects.get(pk=flight_id)
     except Flight.DoesNotExist:
