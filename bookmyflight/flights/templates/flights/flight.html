@@ -1,11 +1,9 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>
-            Flights
-        </title>
-    </head>
-    <body>
+{% extends "flights/base.html" %}
+{% block title %}            
+    Flights
+{% endblock %}
+{% block body %}
+
         <h1>Flight {{ flight.id }}</h1>
         <ul>
             <li>
@@ -16,5 +14,4 @@
             </li>
            </ul>
            <a href="{% url 'index' %}">Back to full listing</a>
-    </body>
-</html>
+{% endblock %}
