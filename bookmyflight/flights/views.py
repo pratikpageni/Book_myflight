@@ -20,7 +20,8 @@ def flight(request,flight_id):
         raise Http404("Flight does not exist.")
     context={
         "flight":flight,
-        "passengers":flight.passengers.all()
+        "passengers":flight.passengers.all(),
+        "non_passengers":Passenger.objects.exclude(flights=flight).all()
     }
     return render (request,"flights/flight.html",context)
 
