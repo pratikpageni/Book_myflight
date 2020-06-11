@@ -22,3 +22,5 @@ def flight(request,flight_id):
         "passengers":flight.passengers.all()
     }
     return render (request,"flights/flight.html",context)
+
+
