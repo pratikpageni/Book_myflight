@@ -1,8 +1,8 @@
-{% extends "flights/base.html "%}
+{% extends "flights/base.html" %}
     {% block title %}
             Flights
        {% endblock %}
-   {% body block %}
+   {% block body %}
         <h1>Flights</h1>
         <ul>
             {% for flight in flights  %}
