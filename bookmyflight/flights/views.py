@@ -42,7 +42,7 @@ def book(request,flight_id):
         return render(request,"flights/error.html",{"message":"No Passenger"})
 
     passenger.flights.add(flight) 
-    return HttpResponseRedirect(reverse("flights",args=(flight_id,))) 
+    return HttpResponseRedirect(reverse("flight",args=(flight_id,))) 
 
 
 
