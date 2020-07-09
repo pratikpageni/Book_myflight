@@ -1,0 +1,11 @@
+{% extends "flights/base1.html" %} {% block body %}
+<h1> Hello, {{ user.first_name }}</h1>
+<ul>
+    <li>
+        Currently logged in as:{{ user.username }}
+    </li>
+    <li>
+        <a href="{% url 'logout' %}">logout</a>
+    </li>
+</ul>
+{% endblock %}

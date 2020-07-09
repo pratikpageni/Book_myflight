@@ -3,5 +3,8 @@
 		{
 			"path": "."
 		}
-	]
+	],
+	"settings": {
+		"python.pythonPath": "C:\\Users\\lenovo\\.virtualenvs\\projflight-44LV_z8u\\Scripts\\python.exe"
+	}
 }

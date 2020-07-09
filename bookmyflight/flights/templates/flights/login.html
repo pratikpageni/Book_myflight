@@ -1,0 +1,34 @@
+{% extends "flights/base1.html" %} {% block body %}
+<style type="text/css">
+    .A {
+        width: auto;
+        margin: 150px;
+        padding: 10px;
+    }
+    
+    .form-control {
+        width: 60%;
+    }
+</style>
+<div class="A">
+    <h1>Login</h1>
+    {% if message %}
+    <div class="container">
+        {{ message }}
+    </div>
+    {% endif %}
+    <form action="{% url 'login' %}" method="post">
+        {% csrf_token %}
+        <div class="form-group">
+            <label for="username">Username:</label>
+            <input class="form-control" name="username" type="text" />
+        </div>
+        <div class="form-group">
+            <label for="password">Password:</label>
+
+            <input class="form-control" name="password" type="password" />
+        </div>
+        <input type="submit" class="btn btn-primary" value="login" />
+    </form>
+</div>
+{% endblock %}
