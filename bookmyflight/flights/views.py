@@ -5,24 +5,12 @@ from .models import Flight,Airport,Passenger
 from django.urls import reverse
 from django.contrib.auth import authenticate,login,logout 
 from django.contrib.auth.forms import UserCreationForm
+from .forms import CreateUserForms
 
 # Create your views here.
-def signup_view(request):
-    form=UserCreationForm()
-    context={"form":form}
-    return render(request,"flights/register.html",context)
-
-            
-
-
-   
-    
-
-
-
 def log(request):
     if not request.user.is_authenticated:
-        return render(request,"flights/login.html",{"message":None})
+        return render(request,"flights/login1.html",{"message":None})
     
     context={
         "user":request.user
@@ -37,14 +25,28 @@ def login_view(request):
         login(request,user)
         return HttpResponseRedirect(reverse("log"))
     else:
-        return render(request,"flights/login.html",{"message":"invalid credential." })      
+        return render(request,"flights/login1.html",{"message":"invalid credential." })      
 
 
 
 
 def logout_view(request):
     logout(request)
-    return render(request,"flights/login.html",{"message":"Logged out"})
+    return render(request,"flights/login1.html",{"message":"Logged out"})
+
+
+def registerPage(request):
+    form=CreateUserForms()
+    
+    if request.method == 'POST':
+        form = CreateUserForms(request.POST)
+        if form.is_valid():
+            form.save()
+    
+    context={"form":form}
+    return render(request,"flights/register.html",context)
+
+
 
 def index(request):
     context={
