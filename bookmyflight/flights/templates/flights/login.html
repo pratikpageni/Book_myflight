@@ -1,13 +1,9 @@
 {% extends "flights/base1.html" %} {% block body %}
 <style type="text/css">
-    .A {
-        width: auto;
-        margin: 150px;
-        padding: 10px;
-    }
+    .A {}
     
     .form-control {
-        width: 60%;
+        width: 40%;
     }
 </style>
 <div class="A">
@@ -28,7 +24,7 @@
 
             <input class="form-control" name="password" type="password" />
         </div>
-        <input type="submit" class="btn btn-primary" value="login" />
+        <input type="submit" class="btn btn-primary" value="login" /><a href="{% url 'signup' %}" class="btn btn-primary" style="margin:20px;">signup</a>
     </form>
 </div>
 {% endblock %}
