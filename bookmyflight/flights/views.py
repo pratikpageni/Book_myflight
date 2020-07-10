@@ -15,7 +15,7 @@ def log(request):
     context={
         "user":request.user
     }
-    return render(request,"flights/user.html",context) 
+    return render(request,"flights/landing.html",context) 
 
 def login_view(request):
     username=request.POST["username"]

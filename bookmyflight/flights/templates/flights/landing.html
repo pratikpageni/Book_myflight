@@ -1,0 +1,350 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+
+    <title>Our Airline</title>
+
+    <!-- Styles -->
+    <link href="{% static '/css/page.min.css' %}" rel="stylesheet">
+    <link href="{% static '/css/style.css' %}" rel="stylesheet">
+
+
+</head>
+
+<body>
+
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark" data-navbar="fixed">
+        <div class="container">
+
+            <div class="navbar-left">
+                <button class="navbar-toggler" type="button">&#9776;</button>
+                <a class="navbar-brand" href="#">
+                    <h1 style="color: lightslategray;"> {{ user.username }}</h1>
+                    <img class="logo-light" src="../assets/img/logo-light.png" alt="logo">
+                </a>
+            </div>
+
+            <section class="navbar-mobile">
+                <nav class="nav nav-navbar ml-auto">
+                    <a class="nav-link" href="#">Products</a>
+                    <a class="nav-link" href="#">Pricing</a>
+                    <a class="nav-link" href="#">Demo</a>
+                    <a class="nav-link" href="#">Solution</a>
+                    <a class="nav-link" href="#">Service</a>
+                    <a class="nav-link" href="{% url 'logout' %}">Logout</a>
+                </nav>
+            </section>
+
+        </div>
+    </nav>
+    <!-- /.navbar -->
+
+
+    <!-- Header -->
+    <header class="header h-fullscreen" style="background-image: url({% static 'img/p.JPG' %})">
+        <div class="overlay opacity-95" style="background-image: linear-gradient(135deg, #fff 0%, #fff 40%, transparent 100%);"></div>
+        <div class="container">
+            <div class="row align-items-center h-100">
+
+                <div class="col-md-8 col-lg-6">
+                    <h1 class="display-4"><strong>Explore our best summer deals</strong></h1>
+                    <p class="lead-2 mt-5 mb-8">Earn 50,000 bonus miles for adventures</p>
+                    <p class="gap-xy">
+                        <a class="btn btn-xl btn-round btn-primary mw-200" href="#">Check in</a>
+                        <a class="btn btn-xl btn-round btn-outline-primary mw-200" href="#">Explore</a>
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </header>
+    <!-- /.header -->
+
+
+    <!-- Main Content -->
+    <main class="main-content">
+
+        <!--
+      |‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒
+      | Products
+      |‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒
+      !-->
+        <section class="section">
+            <div class="container">
+                <header class="section-header">
+
+                    <h2>Complement your journey</h2>
+                    <hr>
+                    <p class="lead">Explore the additional services we offer to make your journey even more memorable.</p>
+                </header>
+
+
+                <div class="row gap-y">
+
+                    <div class="col-6 col-md-4 col-xl-2">
+                        <a class="card card-body border hover-shadow-6 text-center py-6" href="#">
+                            <p style="color: #78a300"><img src="{% static 'img/0.PNG' %}"></p>
+                            <h6 class="mb-0"><strong>Bookings</strong></h6>
+                        </a>
+                    </div>
+
+
+                    <div class="col-6 col-md-4 col-xl-2">
+                        <a class="card card-body border hover-shadow-6 text-center py-6" href="#">
+                            <p style="color: #eb4a62"><img src="{% static 'img/1.PNG' %}"></p>
+                            <h6 class="mb-0"><strong>Cargo</strong></h6>
+                        </a>
+                    </div>
+
+
+                    <div class="col-6 col-md-4 col-xl-2">
+                        <a class="card card-body border hover-shadow-6 text-center py-6" href="#">
+                            <p style="color: #f69a3e"><img src="{% static 'img/5.PNG' %}"></p>
+                            <h6 class="mb-0"><strong>Lounge Access</strong></h6>
+                        </a>
+                    </div>
+
+
+                    <div class="col-6 col-md-4 col-xl-2">
+                        <a class="card card-body border hover-shadow-6 text-center py-6" href="#">
+                            <p style="color: #f0c93e"><img src="{% static 'img/6.PNG' %}"></p>
+                            <h6 class="mb-0"><strong>Airport hotel</strong></h6>
+                        </a>
+                    </div>
+
+
+                    <div class="col-6 col-md-4 col-xl-2">
+                        <a class="card card-body border hover-shadow-6 text-center py-6" href="#">
+                            <p style="color: #37b8af"><img src="{% static 'img/8.PNG' %}"></p>
+                            <h6 class="mb-0"><strong>Hotel bookings</strong></h6>
+                        </a>
+                    </div>
+
+
+                    <div class="col-6 col-md-4 col-xl-2">
+                        <a class="card card-body border hover-shadow-6 text-center py-6" href="#">
+                            <p style="color: #2faabc"><img src="{% static 'img/9.PNG' %}"></p>
+                            <h6 class="mb-0"><strong>Car rentals</strong></h6>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!--
+      |‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒
+      | Video
+      |‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒
+      !-->
+        <section class="section text-white" style="background-image: url({% static 'img/A.JPG' %})" data-overlay="3">
+            <div class="container">
+                <header class="section-header">
+                    <h2>Watch Video</h2>
+                    <hr>
+                    <p class="lead-3">Let travel lead your imagination</p>
+                </header>
+
+
+                <div class="text-center mb-7">
+                    <a class="btn btn-xl btn-glass btn-circle btn-light" href="https://www.youtube.com/watch?v=r9vjW5ITfsw" data-provide="lightbox"><i class="fa fa-play"></i></a>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!--
+      |‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒
+      | Features
+      |‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒
+      !-->
+        <section class="section">
+            <div class="container">
+
+                <div class="row gap-y align-items-center">
+                    <div class="col-md-5 ml-auto">
+                        <h4>Take your business travel further</h4>
+                        <p>Elevate your business with a rewards programme that makes the most of your corporate travel.</p>
+                        <p>With Beyond Business by our airlines, your company can earn valuable rewards for every dollar spent, and enjoy exclusive benefits including fast track Gold and Silver status along with lounge access.</p>
+
+                    </div>
+
+                    <div class="col-md-5 text-center order-md-first">
+                        <img src="{% static 'img/f.JPG' %}" alt="...">
+                    </div>
+                </div>
+
+
+                <hr class="my-8">
+
+
+                <div class="row gap-y align-items-center">
+                    <div class="col-md-5 mr-auto">
+                        <h4>Why book online ?</h4>
+                        <p>When you book on ourairlines.com, you will have the world right at your fingertips. </p>
+                        <p>Find great fares.</p>
+                        <p>
+                            Book anytime, anywhere.
+                        </p>
+                        <p>Convenient payment options.</p>
+                        <p>
+                            Earn bonus on every booking.
+                        </p>
+                    </div>
+
+                    <div class="col-md-5">
+                        <img src="{% static 'img/i.JPG'%}" alt="...">
+                    </div>
+                </div>
+
+
+            </div>
+        </section>
+
+
+        <!--
+      |‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒
+      | Signup
+      |‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒
+      !-->
+        <section class="section bg-gray">
+            <div class="container">
+
+                <h3 class="text-center fw-200"><strong>Join</strong> Our proud partners</h3>
+
+
+            </div>
+        </section>
+
+
+        <!--
+      |‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒
+      | Partner
+      |‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒
+      !-->
+        <section class="section bg-gray">
+            <div class="container">
+                <div data-provide="slider" data-autoplay="true" data-slides-to-show="4">
+                    <div><img src="{% static 'img/p1.PNG' %}" alt="partner 1"></div>
+                    <div><img src="{% static 'img/p2.PNG' %}" alt="partner 2"></div>
+                    <div><img src="{% static 'img/p3.PNG' %}" alt="partner 3"></div>
+                    <div><img src="{% static 'img/p4.PNG' %}" alt="partner 4"></div>
+                    <div><img src="{% static 'img/p5.PNG' %}" alt="partner 5"></div>
+                    <div><img src="{% static 'img/p6.PNG' %}" alt="partner 6"></div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer class="footer text-white bg-img bg-fixed" style="background-image: url(../assets/img/vector/9.jpg)" data-overlay="8">
+        <div class="container py-7">
+            <div class="row gap-y">
+
+                <div class="col-6 col-md-4 col-xl-2">
+                    <h6 class="mb-4"><strong>Company</strong></h6>
+                    <div class="nav flex-column">
+                        <a class="nav-link" href="#">About us</a>
+                        <a class="nav-link" href="#">Careers</a>
+                        <a class="nav-link" href="#">Press</a>
+                        <a class="nav-link" href="#">Brand Guidelines</a>
+                    </div>
+                </div>
+
+                <div class="col-6 col-md-4 col-xl-2">
+                    <h6 class="mb-4"><strong>Product</strong></h6>
+                    <div class="nav flex-column">
+                        <a class="nav-link" href="#">Why TheThemeio?</a>
+                        <a class="nav-link" href="#">Success Stories</a>
+                        <a class="nav-link" href="#">Pricing</a>
+                        <a class="nav-link" href="#">Security</a>
+                    </div>
+                </div>
+
+                <div class="col-6 col-md-4 col-xl-2">
+                    <h6 class="mb-4"><strong>Resources</strong></h6>
+                    <div class="nav flex-column">
+                        <a class="nav-link" href="#">Freebies</a>
+                        <a class="nav-link" href="#">Partners</a>
+                        <a class="nav-link" href="#">Events</a>
+                        <a class="nav-link" href="#">Assets</a>
+                    </div>
+                </div>
+
+                <div class="col-6 col-md-4 col-xl-2">
+                    <h6 class="mb-4"><strong>Community</strong></h6>
+                    <div class="nav flex-column">
+                        <a class="nav-link" href="#">Blog</a>
+                        <a class="nav-link" href="#">Forums</a>
+                        <a class="nav-link" href="#">Meetups</a>
+                        <a class="nav-link" href="#">For Investors</a>
+                    </div>
+                </div>
+
+                <div class="col-6 col-md-4 col-xl-2">
+                    <h6 class="mb-4"><strong>Support</strong></h6>
+                    <div class="nav flex-column">
+                        <a class="nav-link" href="#">Help Center</a>
+                        <a class="nav-link" href="#">Guides</a>
+                        <a class="nav-link" href="#">API</a>
+                        <a class="nav-link" href="#">FAQ</a>
+                    </div>
+                </div>
+
+                <div class="col-6 col-md-4 col-xl-2">
+                    <h6 class="mb-4"><strong>Extras</strong></h6>
+                    <div class="nav flex-column">
+                        <a class="nav-link" href="#">Podcast</a>
+                        <a class="nav-link" href="#">Shop</a>
+                        <a class="nav-link" href="#">Licenses</a>
+                        <a class="nav-link" href="#">Become Affiliate</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="container">
+            <div class="row gap-y">
+
+                <div class="col-md-6 text-center text-md-left">
+                    <small class="opacity-70">© 2020 our airlines. All rights reserved.</small>
+                </div>
+
+                <div class="col-md-6 text-center text-md-right">
+                    <div class="social">
+                        <a class="social-facebook" href="#"><i class="fa fa-facebook"></i></a>
+                        <a class="social-twitter" href="#"><i class="fa fa-twitter"></i></a>
+                        <a class="social-youtube" href="#"><i class="fa fa-youtube"></i></a>
+                        <a class="social-instagram" href="#"><i class="fa fa-instagram"></i></a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+    <!-- /.footer -->
+
+
+    <!-- Scripts -->
+    <script src="{% static '/js/page.min.js' %}"></script>
+    <script src="{% static '/js/script.js' %}"></script>
+
+</body>
+
+</html>
