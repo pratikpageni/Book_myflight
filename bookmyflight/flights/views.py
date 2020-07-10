@@ -48,13 +48,13 @@ def registerPage(request):
 
 
 
-def index(request):
+def flights_view(request):
     context={
       "flights":Flight.objects.all()  
     }
    
 
-    return render (request,"flights/index.html",context)
+    return render (request,"flights/flightsinfo.html",context)
 
 def signup_view(request):
     return render(request,"flights/register.html")
@@ -70,7 +70,7 @@ def flight(request,flight_id):
         "passengers":flight.passengers.all(),
         "non_passengers":Passenger.objects.exclude(flights=flight).all()
     }
-    return render (request,"flights/flight.html",context)
+    return render (request,"flights/flightdetail.html",context)
 
 
 def book(request,flight_id):
