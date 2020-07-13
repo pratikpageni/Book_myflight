@@ -39,10 +39,10 @@
 
             <section class="navbar-mobile">
                 <nav class="nav nav-navbar ml-auto">
-                    <a class="nav-link" href="#">About us</a>
+                    <a class="nav-link" href="{% url 'about' %}">About us</a>
                     <a class="nav-link" href="{% url 'flights' %}">Flights</a>
                     <a class="nav-link" href="{% url 'addpassenger' %}">Book</a>
-                    <a class="nav-link" href="{% url 'about' %}">Contact</a>
+                    <a class="nav-link" href="{% url 'contact' %}">Contact</a>
                     <a class="nav-link" href="#">profile({{ user.username }})</a>
                     <a class="nav-link" href="{% url 'logout' %}">Logout</a>
                 </nav>
@@ -219,14 +219,14 @@
                             <a class="nav-link" href="#">About us</a>
                             <a class="nav-link" href="#">Careers</a>
                             <a class="nav-link" href="#">Press</a>
-                            <a class="nav-link" href="#">Brand Guidelines</a>
+
                         </div>
                     </div>
 
                     <div class="col-6 col-md-4 col-xl-2">
                         <h6 class="mb-4"><strong>Product</strong></h6>
                         <div class="nav flex-column">
-                            <a class="nav-link" href="#">Why TheThemeio?</a>
+
                             <a class="nav-link" href="#">Success Stories</a>
                             <a class="nav-link" href="#">Pricing</a>
                             <a class="nav-link" href="#">Security</a>
@@ -267,7 +267,7 @@
                         <h6 class="mb-4"><strong>Extras</strong></h6>
                         <div class="nav flex-column">
                             <a class="nav-link" href="#">Podcast</a>
-                            <a class="nav-link" href="#">Shop</a>
+
                             <a class="nav-link" href="#">Licenses</a>
                             <a class="nav-link" href="#">Become Affiliate</a>
                         </div>
