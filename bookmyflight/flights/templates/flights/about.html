@@ -1,0 +1,309 @@
+{% load static %}
+<!DOCTYPE html>
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+
+    <title>Our Airline</title>
+
+    <!-- Styles -->
+    <link href="{% static '/css/page.min.css' %}" rel="stylesheet">
+    <link href="{% static '/css/style.css' %}" rel="stylesheet">
+    <!-- Styles -->
+
+
+
+</head>
+
+<body>
+
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark" data-navbar="fixed">
+        <div class="container">
+
+            <div class="navbar-left">
+                <button class="navbar-toggler" type="button">&#9776;</button>
+                <a class="navbar-brand" href="#">
+                    <h1 style="color: lightslategray;">Our airline </h1>
+
+
+
+                    <img class="logo-light" src="../assets/img/logo-light.png" alt="logo">
+                </a>
+            </div>
+
+            <section class="navbar-mobile">
+                <nav class="nav nav-navbar ml-auto">
+                    <a class="nav-link" href="#">About us</a>
+                    <a class="nav-link" href="{% url 'flights' %}">Flights</a>
+                    <a class="nav-link" href="{% url 'addpassenger' %}">Book</a>
+                    <a class="nav-link" href="{% url 'about' %}">Contact</a>
+                    <a class="nav-link" href="#">profile({{ user.username }})</a>
+                    <a class="nav-link" href="{% url 'logout' %}">Logout</a>
+                </nav>
+            </section>
+
+        </div>
+    </nav>
+    <!-- /.navbar -->
+
+
+    <!-- Header -->
+    <header class="header header-inverse" style="background-color: #c2b2cd;">
+        <div class="container text-center">
+
+            <div class="row">
+                <div class="col-12 col-lg-8 offset-lg-2">
+
+                    <h1>About Us</h1>
+                    <p class="fs-20 opacity-70">Find out about our story, services and meet our great team</p>
+
+                </div>
+            </div>
+
+        </div>
+    </header>
+    <!-- END Header -->
+
+
+
+
+    <!-- Main container -->
+    <main class="main-content">
+
+
+
+
+        <!--
+        |‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒
+        | Mission
+        |‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒
+        !-->
+        <section class="section py-150">
+            <div class="container">
+
+                <div class="row">
+
+                    <div class="col-12 col-lg-6 pl-50 pr-80">
+                        <h2>Our Story</h2>
+                        <p class="lead">The story of Our Airline begins with a maiden flight to the top of the world on a Beechcraft 1900D on 11 October 1997. Since then, we have grown to be the largest and longest operating privately owned domestic airlines of Nepal.</p>
+
+                        <br>
+
+                        <p>
+                            <i class="ti-check text-success mr-8"></i>
+                            <span class="fs-14">Deliver a high quality aviation service</span>
+                        </p>
+
+                        <p>
+                            <i class="ti-check text-success mr-8"></i>
+                            <span class="fs-14">Support our customers to the fullest</span>
+                        </p>
+
+                        <p>
+                            <i class="ti-check text-success mr-8"></i>
+                            <span class="fs-14">Streamline an expanded range of services</span>
+                        </p>
+
+
+                    </div>
+
+
+                    <div class="col-lg-6 hidden-md-down align-self-center">
+                        <img class="shadow-3" src="{% static 'img/story.JPG' %}" alt="..." data-aos="fade-left" data-aos-duration="1500">
+                    </div>
+
+                </div>
+
+
+            </div>
+        </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <!--
+        |‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒
+        | Team
+        |‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒
+        !-->
+        <section class="section">
+            <div class="container">
+                <header class="section-header">
+                    <small>Team</small>
+                    <h2>Who We Are</h2>
+                    <hr>
+                    <p class="lead">Meet the team working to make your travel life simpler for you.</p>
+                </header>
+
+
+                <div class="row gap-y">
+                    <div class="col-12 col-md-4 team-2">
+                        <a href="#">
+                            <img src="{% static 'img/ceo.JPG' %}" alt="...">
+                        </a>
+                        <h5>Morgan Guadis</h5>
+                        <small>Co-Founder & CTO</small>
+                        <p>Phd from MIT. Distinguished member of IEE</p>
+                        <br>
+                        <div class="social social-boxed social-rounded social-gray">
+                            <a class="social-facebook" href="#"><i class="fa fa-facebook"></i></a>
+                            <a class="social-twitter" href="#"><i class="fa fa-twitter"></i></a>
+                            <a class="social-gplus" href="#"><i class="fa fa-google-plus"></i></a>
+                            <a class="social-linkedin" href="#"><i class="fa fa-linkedin"></i></a>
+                        </div>
+                    </div>
+
+
+                    <div class="col-12 col-md-4 team-2">
+                        <a href="#">
+                            <img src="{% static 'img/cto.JPEG' %}" alt="...">
+                        </a>
+                        <h5>John Senating</h5>
+                        <small>Co-Founder & CEO</small>
+                        <p>Phd from Caltech.Member and head of Linux Foundation</p>
+                        <br>
+                        <div class="social social-boxed social-rounded social-gray">
+                            <a class="social-facebook" href="#"><i class="fa fa-facebook"></i></a>
+                            <a class="social-twitter" href="#"><i class="fa fa-twitter"></i></a>
+                            <a class="social-gplus" href="#"><i class="fa fa-google-plus"></i></a>
+                            <a class="social-linkedin" href="#"><i class="fa fa-linkedin"></i></a>
+                        </div>
+                    </div>
+
+
+                    <div class="col-12 col-md-4 team-2">
+                        <a href="#">
+                            <img src="{% static 'img/director.JPG' %}" alt="...">
+                        </a>
+                        <h5>Sandi Hormez</h5>
+                        <small>Director</small>
+                        <p>Masters from Havard</p>
+                        <br>
+                        <div class="social social-boxed social-rounded social-gray">
+                            <a class="social-facebook" href="#"><i class="fa fa-facebook"></i></a>
+                            <a class="social-twitter" href="#"><i class="fa fa-twitter"></i></a>
+                            <a class="social-gplus" href="#"><i class="fa fa-google-plus"></i></a>
+                            <a class="social-linkedin" href="#"><i class="fa fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer text-white bg-img bg-fixed" style="background-image: url(../assets/img/vector/9.jpg)" data-overlay="8">
+            <div class="container py-7">
+                <div class="row gap-y">
+
+                    <div class="col-6 col-md-4 col-xl-2">
+                        <h6 class="mb-4"><strong>Company</strong></h6>
+                        <div class="nav flex-column">
+                            <a class="nav-link" href="#">About us</a>
+                            <a class="nav-link" href="#">Careers</a>
+                            <a class="nav-link" href="#">Press</a>
+                            <a class="nav-link" href="#">Brand Guidelines</a>
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-md-4 col-xl-2">
+                        <h6 class="mb-4"><strong>Product</strong></h6>
+                        <div class="nav flex-column">
+                            <a class="nav-link" href="#">Why TheThemeio?</a>
+                            <a class="nav-link" href="#">Success Stories</a>
+                            <a class="nav-link" href="#">Pricing</a>
+                            <a class="nav-link" href="#">Security</a>
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-md-4 col-xl-2">
+                        <h6 class="mb-4"><strong>Resources</strong></h6>
+                        <div class="nav flex-column">
+                            <a class="nav-link" href="#">Freebies</a>
+                            <a class="nav-link" href="#">Partners</a>
+                            <a class="nav-link" href="#">Events</a>
+                            <a class="nav-link" href="#">Assets</a>
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-md-4 col-xl-2">
+                        <h6 class="mb-4"><strong>Community</strong></h6>
+                        <div class="nav flex-column">
+                            <a class="nav-link" href="#">Blog</a>
+                            <a class="nav-link" href="#">Forums</a>
+                            <a class="nav-link" href="#">Meetups</a>
+                            <a class="nav-link" href="#">For Investors</a>
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-md-4 col-xl-2">
+                        <h6 class="mb-4"><strong>Support</strong></h6>
+                        <div class="nav flex-column">
+                            <a class="nav-link" href="#">Help Center</a>
+                            <a class="nav-link" href="#">Guides</a>
+                            <a class="nav-link" href="#">API</a>
+                            <a class="nav-link" href="#">FAQ</a>
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-md-4 col-xl-2">
+                        <h6 class="mb-4"><strong>Extras</strong></h6>
+                        <div class="nav flex-column">
+                            <a class="nav-link" href="#">Podcast</a>
+                            <a class="nav-link" href="#">Shop</a>
+                            <a class="nav-link" href="#">Licenses</a>
+                            <a class="nav-link" href="#">Become Affiliate</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="container">
+                <div class="row gap-y">
+
+                    <div class="col-md-6 text-center text-md-left">
+                        <small class="opacity-70">© 2020 our airlines. All rights reserved.</small>
+                    </div>
+
+                    <div class="col-md-6 text-center text-md-right">
+                        <div class="social">
+                            <a class="social-facebook" href="#"><i class="fa fa-facebook"></i></a>
+                            <a class="social-twitter" href="#"><i class="fa fa-twitter"></i></a>
+                            <a class="social-youtube" href="#"><i class="fa fa-youtube"></i></a>
+                            <a class="social-instagram" href="#"><i class="fa fa-instagram"></i></a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </footer>
+        <!-- /.footer -->
+
+
+        <!-- Scripts -->
+        <script src="{% static '/js/page.min.js' %}"></script>
+        <script src="{% static '/js/script.js' %}"></script>
+
+</body>
+
+</html>
