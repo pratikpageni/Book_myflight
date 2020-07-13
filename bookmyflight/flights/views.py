@@ -5,7 +5,7 @@ from .models import Flight,Airport,Passenger
 from django.urls import reverse
 from django.contrib.auth import authenticate,login,logout 
 from django.contrib.auth.forms import UserCreationForm
-from .forms import CreateUserForms
+from .forms import CreateUserForms,PassengerForm
 
 # Create your views here.
 def log(request):
@@ -90,6 +90,25 @@ def book(request,flight_id):
 
     passenger.flights.add(flight) 
     return HttpResponseRedirect(reverse("flight",args=(flight_id,))) 
+
+def addpassenger(request):
+    form=PassengerForm()
+    if request.method=='POST':
+        form=PassengerForm(request.POST)
+        if form.is_valid():
+            form.save()
+
+
+        
+
+        
+    context={'form':form}
+
+    return render(request,"flights/booking.html",context)
+
+def aboutus(request):
+    return render(request,"flights/about.html")
+        
 
 
 

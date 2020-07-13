@@ -39,8 +39,8 @@
                 <nav class="nav nav-navbar ml-auto">
                     <a class="nav-link" href="#">About us</a>
                     <a class="nav-link" href="{% url 'flights' %}">Flights</a>
-                    <a class="nav-link" href="#">Book</a>
-                    <a class="nav-link" href="#">Contact</a>
+                    <a class="nav-link" href="{% url 'addpassenger' %}">Book</a>
+                    <a class="nav-link" href="{% url 'about' %}">Contact</a>
                     <a class="nav-link" href="#">profile({{ user.username }})</a>
                     <a class="nav-link" href="{% url 'logout' %}">Logout</a>
                 </nav>

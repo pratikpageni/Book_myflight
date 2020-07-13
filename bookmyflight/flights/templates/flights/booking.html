@@ -1,25 +1,28 @@
 {% load static %}
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="keywords" content="">
 
-    <title>Our Airline</title>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="">
+        <meta name="keywords" content="">
 
-    <!-- Styles -->
-    <link href="{% static '/css/page.min.css' %}" rel="stylesheet">
-    <link href="{% static '/css/style.css' %}" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.css" />
+        <title class="">Our Airline</title>
 
+
+        <!-- Styles -->
+        <link href="{% static '/css/page.min.css' %}" rel="stylesheet">
+        <link href="{% static '/css/style.css' %}" rel="stylesheet">
+
+
+
+    </head>
 </head>
 
 <body>
-
-
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark" data-navbar="fixed">
         <div class="container">
@@ -39,7 +42,7 @@
                 <nav class="nav nav-navbar ml-auto">
                     <a class="nav-link" href="#">About us</a>
                     <a class="nav-link" href="{% url 'flights' %}">Flights</a>
-                    <a class="nav-link" href="#">Book</a>
+                    <a class="nav-link" href="{% url 'addpassenger' %}">Book</a>
                     <a class="nav-link" href="#">Contact</a>
                     <a class="nav-link" href="#">profile({{ user.username }})</a>
                     <a class="nav-link" href="{% url 'logout' %}">Logout</a>
@@ -48,43 +51,21 @@
 
         </div>
     </nav>
-    <section class="section">
-        <div class="container">
-            <div class="columns">
-                <div class="column is-offset-4 is-4">
-                    <h1 style="display: block; font-size: 3em; font-weight:bold; ">Flights</h1>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="section" style="margin-bottom:150px;">
-        <div class="container">
-            <div class="columns">
-                <div class="column is-offset-4 is-4">
-                    {% for flight in flights %}
-                    <div class="box">
-                        <article class="media">
-
-                            <div class="media-content">
-                                <div class="content">
-                                    <p>
-                                        <span class="title">
-                                            <a href="{% url 'flight' flight.id %}"> {{ flight }}
-                                        </span>
 
 
-                                    </p>
-                                </div>
-                            </div>
+    <div style="margin-top: 200px;margin-left: 260px; margin-bottom: 300px;">
+        <h2 style="text-align: inherit; margin-bottom: 50px; ">Register Flights</h2>
 
-                        </article>
-                    </div>
-                    {% endfor %}
-                </div>
-            </div>
-        </div>
-    </section>
+
+        <form action="" method="POST">
+            {% csrf_token %} {{form}}
+
+
+            <input type="submit" value="Book flight">
+
+        </form>
+    </div>
+
 
     <!-- Footer -->
     <footer class="footer text-white bg-img bg-fixed" style="background-image: url(../assets/img/vector/9.jpg)" data-overlay="8">
@@ -184,5 +165,10 @@
 
 </body>
 
+</html>
+
+
+
+</body>
 
 </html>

@@ -11,7 +11,10 @@ urlpatterns=[
     path("register/",views.registerPage,name="register"),
     path("flights",views.flights_view,name="flights"),
     path("<int:flight_id>",views.flight,name="flight"),
-    path("<int:flight_id>/book",views.book,name="book")
+    path("<int:flight_id>/book",views.book,name="book"),
+    path("passenger",views.addpassenger,name="addpassenger"),
+    path("about",views.aboutus,name="about"),
+    
  
  ]
 
