@@ -108,6 +108,10 @@ def addpassenger(request):
 
 def aboutus(request):
     return render(request,"flights/about.html")
+
+
+def contactus(request):
+    return render(request,"flights/contact.html")
         
 
 

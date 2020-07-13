@@ -14,6 +14,7 @@ urlpatterns=[
     path("<int:flight_id>/book",views.book,name="book"),
     path("passenger",views.addpassenger,name="addpassenger"),
     path("about",views.aboutus,name="about"),
+    path("contact",views.contactus,name="contact"),
     
  
  ]
