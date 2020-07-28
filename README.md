@@ -15,3 +15,28 @@ A Django web app for a airline company to manage their flights let customers sig
 `pipenv sync         `\
 -Or\
 `pipenv sync --dev   `
+
+## login
+![](login.PNG)
+![](signup.PNG)
+
+
+## landing page
+![](landing1.PNG)
+![](landing2.PNG)
+![](landing3.PNG)
+![](landing4.PNG)
+
+
+## Booking
+![](booking.PNG)
+
+## flights
+![](flights.PNG)
+![](flights1.PNG)
+
+## contact
+![](contact.PNG)
+
+
+
