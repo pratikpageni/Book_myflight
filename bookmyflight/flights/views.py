@@ -49,6 +49,10 @@ def registerPage(request):
 
 
 def flights_view(request):
+    if not request.user.is_authenticated:
+        return render(request,"flights/login1.html",{"message":None})
+    
+    
     context={
       "flights":Flight.objects.all()  
     }
@@ -65,6 +69,10 @@ def flight(request,flight_id):
         flight=Flight.objects.get(pk=flight_id)
     except Flight.DoesNotExist:
         raise Http404("Flight does not exist.")
+    if not request.user.is_authenticated:
+        return render(request,"flights/login1.html",{"message":None})
+    
+    
     context={
         "flight":flight,
         "passengers":flight.passengers.all(),
@@ -101,17 +109,35 @@ def addpassenger(request):
 
         
 
-        
+    if not request.user.is_authenticated:
+        return render(request,"flights/login1.html",{"message":None})
+    
+      
     context={'form':form}
 
     return render(request,"flights/booking.html",context)
 
 def aboutus(request):
-    return render(request,"flights/about.html")
+    if not request.user.is_authenticated:
+        return render(request,"flights/login1.html",{"message":None})
+    
+    context={
+        "user":request.user
+    }
+    
+
+    return render(request,"flights/about.html",context)
 
 
 def contactus(request):
-    return render(request,"flights/contact.html")
+    if not request.user.is_authenticated:
+        return render(request,"flights/login1.html",{"message":None})
+    
+    context={
+        "user":request.user
+    }
+    
+    return render(request,"flights/contact.html",context)
         
 
 
